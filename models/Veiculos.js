@@ -1,26 +1,26 @@
 const { DataTypes } = require('sequelize')
 const sequelize = require('../db/conn')
 
-const Clientes = sequelize.define('cliente', {
-    codClientes: {
+const Veiculo = sequelize.define('veiculo', {
+    codVeiculos: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    nome: {
+    placa: {
         type: DataTypes.STRING(55),
         allowNull: false
     },
-    telefone: {
+    modelo: {
         type: DataTypes.STRING(20),
         allowNull: false
     },
-    email: {
+    fabricante: {
         type: DataTypes.STRING(50),
         allowNull: true
     }
 }, {
-    tableName: "clientes",
+    tableName: "veiculos",
     timestamps: false
 })
 
