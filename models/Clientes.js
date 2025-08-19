@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize')
 const sequelize = require('../db/conn')
 
 const Clientes = sequelize.define('cliente', {
-    codClientes: {
+    codCliente: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true

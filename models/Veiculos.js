@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize')
 const sequelize = require('../db/conn')
 
 const Veiculo = sequelize.define('veiculo', {
-    codVeiculos: {
+    codVeiculo: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
@@ -24,4 +24,4 @@ const Veiculo = sequelize.define('veiculo', {
     timestamps: false
 })
 
-module.exports = Clientes
+module.exports = Veiculo
