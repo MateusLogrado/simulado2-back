@@ -7,15 +7,15 @@ const Veiculo = sequelize.define('veiculo', {
         primaryKey: true,
         autoIncrement: true
     },
-    placa: {
+    placa: { // uma placa é uma mistura de numeros e caracteres
         type: DataTypes.STRING(55),
         allowNull: false
     },
-    modelo: {
+    modelo: { // o modelo, o unico jeito é ser String
         type: DataTypes.STRING(20),
         allowNull: false
     },
-    fabricante: {
+    fabricante: { // o fabricante, o unico jeito é ser String
         type: DataTypes.STRING(50),
         allowNull: true
     }

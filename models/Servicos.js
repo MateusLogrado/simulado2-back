@@ -7,11 +7,11 @@ const Servico = db.define("servico", {
         primaryKey: true,
         autoIncrement: true
     },
-    dataServico: {
+    dataServico: { // obtamos por causa "-"
         type: DataTypes.STRING(10),
         allowNull: false
     },
-    descricaoServico: {
+    descricaoServico: { // obtamos por ser o unico caminho para uma descrição
         type: DataTypes.STRING,
         allowNull: false
     },

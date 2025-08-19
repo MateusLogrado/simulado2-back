@@ -7,15 +7,15 @@ const Clientes = sequelize.define('cliente', {
         primaryKey: true,
         autoIncrement: true
     },
-    nome: {
-        type: DataTypes.STRING(55),
+    nome: { // o nome, o unico jeito é ser String
+        type: DataTypes.STRING(55), 
         allowNull: false
     },
-    telefone: {
+    telefone: { // obtamos por causa do "()" e "-"
         type: DataTypes.STRING(20),
         allowNull: false
     },
-    email: {
+    email: { // igual ao nome, unico caminho para funcionar
         type: DataTypes.STRING(50),
         allowNull: true
     }

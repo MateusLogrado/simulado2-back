@@ -25,7 +25,7 @@ const apagar = async (req,res) =>{
     const valores = req.params.id
     try{
         const dados = await Servico.findByPk(valores)
-        if(dados){
+        if(dados){ // aqui ele verifica o dado existe antes de apagar
             await Servico.destroy({where: { codOrdem: valores}})
             res.status(204).json({message: 'Dados excluídos com sucesso!'})
         }else{
@@ -42,7 +42,7 @@ const atualizar = async (req,res)=>{
     const valores = req.body
     try{
         let dados = await Servico.findByPk(valor)
-        if(dados){
+        if(dados){ // aqui ele verifica o dado existe antes de atualizar
             await Servico.update(valores, {where: { codOrdem: valor}})
             dados = await Servico.findByPk(valor)
             res.status(200).json(dados)

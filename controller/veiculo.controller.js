@@ -25,7 +25,7 @@ const apagar = async (req,res) =>{
     const valores = req.params.id
     try{
         const dados = await Veiculo.findByPk(valores)
-        if(dados){
+        if(dados){ // aqui ele verifica o dado existe antes de apagar
             await Veiculo.destroy({where: { codVeiculo: valores}})
             res.status(204).json({message: 'Dados excluídos com sucesso!'})
         }else{
