@@ -24,7 +24,7 @@ const Servico = db.define("servico", {
         allowNull: false,
         references: {
             model: "clientes",
-            key: "codClinte"
+            key: "codCliente"
         }
     },
         idVeiculo: {

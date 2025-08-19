@@ -1,6 +1,6 @@
-const Cliente = require("./Cliente")
-const Veiculo = require("./Veiculo")
-const Servico = require("./Servico")
+const Cliente = require("./Clientes")
+const Veiculo = require("./Veiculos")
+const Servico = require("./Servicos")
 
 Cliente.hasMany(Servico, {
     foreignKey: "idCliente", 
